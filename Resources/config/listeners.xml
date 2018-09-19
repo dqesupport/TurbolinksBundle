@@ -7,6 +7,7 @@
     <parameters>
         <parameter key="helthe_turbolinks.listener.turbolinks.class">Helthe\Component\Turbolinks\EventListener\TurbolinksListener</parameter>
         <parameter key="helthe_turbolinks.turbolinks.class">Helthe\Component\Turbolinks\Turbolinks</parameter>
+        <parameter key="helthe_turbolinksbundle.command.install.class">Helthe\Bundle\TurbolinksBundle\Command\InstallCommand</parameter>
     </parameters>
 
     <services>
@@ -16,5 +17,8 @@
         </service>
 
         <service id="helthe_turbolinks.turbolinks" class="%helthe_turbolinks.turbolinks.class%" />
+        <service id="helthe_turbolinksbundle.command.install" class="%helthe_turbolinksbundle.command.install.class%">
+            <tag name="console.command"/>
+        </service>
     </services>
 </container>
